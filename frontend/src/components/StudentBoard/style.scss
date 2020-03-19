@@ -1,0 +1,81 @@
+.student-progress-board {
+  .board-title {
+    font-weight: 700;
+  }
+
+  .students-status {
+    padding: 1vw 10vw 1vw 2vw;
+
+    .progress-line {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #000;
+      padding: 10px 5px;
+      margin-left: 16%;
+
+      .progress-line-item {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    .students-status-list {
+      .student-status-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 0 20px;
+
+        .student-name {
+          width: 16%;
+          font-size: 18px;
+        }
+
+        .course-status {
+          display: flex;
+          align-items: center;
+          width: 14%;
+          height: 35px;
+          padding: 0 8px;
+          border: 1px solid #000;
+          cursor: pointer;
+          position: relative;
+
+          &.active {
+            background: #a6fb6b;
+          }
+
+          .course {
+            font-size: 12px;
+            width: 100%;
+          }
+
+          .current-course-status {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            font-size: 12px;
+
+            &.warning {
+              color: #ff7d5a;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .threads-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+
+    .threads-block {
+      width: 32%;
+
+      .threads-content {
+        height: 25rem;
+        border: 1px solid #000;
+      }
+    }
+  }
+}

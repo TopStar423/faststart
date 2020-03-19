@@ -1,0 +1,10 @@
+.course-popover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .course-url {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
