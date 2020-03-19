@@ -1,4 +1,4 @@
-export const BACKEND_API_LOCATION   = process.env.REACT_APP_BACKEND_API_LOCATION;
+export const BACKEND_API_LOCATION   = process.env.REACT_APP_BACKEND_API_LOCATION || '/api';
 
 //AUTH
 export const LOGIN_API = `${BACKEND_API_LOCATION}/login`;
