@@ -1,6 +1,7 @@
 .dashboard-container {
   padding: 2vw 3vw;
-  height: 100vh;
+  height: 100%;
+  overflow: auto;
 
   .ant-tabs-card {
     height: 100%;
