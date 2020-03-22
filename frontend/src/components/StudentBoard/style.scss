@@ -4,15 +4,14 @@
   }
 
   .students-status {
-    padding: 1vw 10vw 1vw 2vw;
+    padding: 1vw 2vw;
 
     .progress-line {
       display: flex;
       justify-content: space-between;
       border-bottom: 2px solid #000;
       padding: 10px 5px;
-      margin-left: 18%;
-      margin-bottom: 15px;
+      margin: 0 25px 15px 18%;
 
       .progress-line-item {
         font-size: 18px;
@@ -22,11 +21,12 @@
 
     .students-status-list {
       height: 70vh;
+      padding-right: 20px;
       overflow: auto;
 
       .student-status-item {
         display: flex;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
 
         .student {
           display: flex;
@@ -42,14 +42,18 @@
           }
         }
 
-        .ant-steps-item-title {
-          font-size: 15px;
-          line-height: 20px;
-        }
+        .ant-steps-item-content {
+          width: 100%;
 
-        .ant-steps-item-description {
-          .warning {
-            color: #ff7d5a;
+          .ant-steps-item-title {
+            font-size: 15px;
+            line-height: 20px;
+          }
+
+          .ant-steps-item-description {
+            .warning {
+              color: #ff7d5a;
+            }
           }
         }
       }
