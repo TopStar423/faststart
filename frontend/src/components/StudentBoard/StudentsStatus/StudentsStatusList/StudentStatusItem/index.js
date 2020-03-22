@@ -61,19 +61,16 @@ export default class StudentStatusItem extends Component {
                 </div>
                 <Steps current={student.courseCompletedLevel} labelPlacement="vertical">
                     {courses.map(course => {
-                        let courseStatus = '';
                         let currentCourseStatus = '';
                         let icon = null;
 
                         if (student.courseCompletedLevel >= course.level) {
-                            courseStatus = 'Completed';
                             icon = (
                                 <Popover content={this.popoverContent(course)} title="Complete Course" trigger="hover">
                                     <CheckCircleTwoTone twoToneColor="#52c41a" />
                                 </Popover>
                             );
                         } else if (student.courseCompletedLevel === course.level - 1) {
-                            courseStatus = 'In progress';
                             currentCourseStatus = (
                                 <span className={student.currentCourseStatus > 20 ? 'warning' : ''}>
                                     It's been {student.currentCourseStatus} days
@@ -85,7 +82,6 @@ export default class StudentStatusItem extends Component {
                                 </Popover>
                             );
                         } else {
-                            courseStatus = 'Waiting';
                             icon = (
                                 <Popover content={this.popoverContent(course)} title="Complete Course" trigger="hover">
                                     <QuestionOutlined />
@@ -96,7 +92,6 @@ export default class StudentStatusItem extends Component {
                         return (
                             <Step
                                 title={course.name}
-                                subTitle={courseStatus}
                                 description={currentCourseStatus}
                                 icon={icon}
                             />
