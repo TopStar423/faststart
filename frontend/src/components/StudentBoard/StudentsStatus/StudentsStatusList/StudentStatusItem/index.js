@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Popover, Steps, Avatar } from 'antd';
 import { UserOutlined, CheckCircleTwoTone, HomeTwoTone, QuestionOutlined } from '@ant-design/icons';
 import CompleteCourseModal from "./CompleteCourseModal";
+import './style.scss';
 
 const { Step } = Steps;
 

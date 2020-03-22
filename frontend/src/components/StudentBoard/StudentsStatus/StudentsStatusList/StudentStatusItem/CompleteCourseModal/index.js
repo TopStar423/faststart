@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Modal, Form, Upload, Button, Icon, message } from 'antd';
-import './style.scss';
 
 const { Dragger } = Upload;
 
