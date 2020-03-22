@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MostCommentedThreads from './MostCommentedThreads';
 import MostLikedThreads from './MostLikedThreads';
 import AdminFavorites from './AdminsFavorites';
+import './style.scss';
 
 export default class Threads extends Component {
     constructor(props) {

@@ -11,7 +11,7 @@
       justify-content: space-between;
       border-bottom: 2px solid #000;
       padding: 10px 5px;
-      margin-left: 16%;
+      margin-left: 18%;
 
       .progress-line-item {
         font-size: 18px;
@@ -22,59 +22,32 @@
     .students-status-list {
       .student-status-item {
         display: flex;
-        align-items: center;
         padding: 15px 0 20px;
 
-        .student-name {
-          width: 16%;
-          font-size: 18px;
-        }
-
-        .course-status {
+        .student {
           display: flex;
-          align-items: center;
-          width: 14%;
-          height: 35px;
-          padding: 0 8px;
-          border: 1px solid #000;
-          cursor: pointer;
-          position: relative;
+          width: 18%;
 
-          &.active {
-            background: #a6fb6b;
+          .student-avatar {
+            margin-right: 10px;
           }
 
-          .course {
-            font-size: 12px;
-            width: 100%;
-          }
-
-          .current-course-status {
-            position: absolute;
-            top: 35px;
-            right: 0;
-            font-size: 12px;
-
-            &.warning {
-              color: #ff7d5a;
-            }
+          .student-name {
+            font-size: 16px;
+            line-height: 30px;
           }
         }
-      }
-    }
-  }
 
-  .threads-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 2vw;
+        .ant-steps-item-title {
+          font-size: 15px;
+          line-height: 20px;
+        }
 
-    .threads-block {
-      width: 32%;
-
-      .threads-content {
-        height: 25rem;
-        border: 1px solid #000;
+        .ant-steps-item-description {
+          .warning {
+            color: #ff7d5a;
+          }
+        }
       }
     }
   }

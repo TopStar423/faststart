@@ -1,0 +1,14 @@
+.threads-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 2vw;
+
+  .threads-block {
+    width: 32%;
+
+    .threads-content {
+      height: 25rem;
+      border: 1px solid #000;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import StudentsStatus from './StudentsStatus';
-import Threads from './Threads';
 import { students } from '../../assets/mockdata/students';
 import { courses } from '../../assets/mockdata/courses';
 import './style.scss';
@@ -18,7 +17,6 @@ export default class StudentBoard extends Component {
                     students={students}
                     courses={courses}
                 />
-                <Threads />
             </div>
         )
     }

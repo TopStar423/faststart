@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
 import StudentBoard from '../StudentBoard';
+import Threads from '../Threads';
 import './style.scss';
 
 const { TabPane } = Tabs;
@@ -35,7 +36,7 @@ export default class Dashboard extends Component {
                         <StudentBoard />
                     </TabPane>
                     <TabPane tab="Most Liked & Commented Threads" key="2">
-                        Most Liked & Commented Threads
+                        <Threads />
                     </TabPane>
                 </Tabs>
             </div>
