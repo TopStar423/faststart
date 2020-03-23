@@ -43,8 +43,44 @@ export const students = [
     },
     {
         id: 8,
-        name: 'Abel Lara',
+        name: 'Fred Neves',
         courseCompletedLevel: 2,
         currentCourseStatus: 24
+    },
+    {
+        id: 9,
+        name: 'Saul Barbaro',
+        courseCompletedLevel: 3,
+        currentCourseStatus: 4
+    },
+    {
+        id: 10,
+        name: 'Josh Buret',
+        courseCompletedLevel: 4,
+        currentCourseStatus: 6
+    },
+    {
+        id: 11,
+        name: 'Andrew Jennings',
+        courseCompletedLevel: 2,
+        currentCourseStatus: 19
+    },
+    {
+        id: 12,
+        name: 'James Smith',
+        courseCompletedLevel: 3,
+        currentCourseStatus: 4
+    },
+    {
+        id: 13,
+        name: 'Michael Garcia',
+        courseCompletedLevel: 4,
+        currentCourseStatus: 12
+    },
+    {
+        id: 14,
+        name: 'Maria Rogriguez',
+        courseCompletedLevel: 2,
+        currentCourseStatus: 28
     }
 ];

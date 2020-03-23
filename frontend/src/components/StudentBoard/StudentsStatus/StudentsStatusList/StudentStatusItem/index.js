@@ -59,7 +59,7 @@ export default class StudentStatusItem extends Component {
                     </div>
                     <div className="student-name">{student.name}</div>
                 </div>
-                <Steps current={student.courseCompletedLevel} labelPlacement="vertical">
+                <Steps current={student.courseCompletedLevel} labelPlacement="horizontal">
                     {courses.map(course => {
                         let currentCourseStatus = '';
                         let icon = null;
