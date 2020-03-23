@@ -10,11 +10,14 @@ export default class StudentBoard extends Component {
     }
 
     render() {
+        const sortedStudents = students;
+        sortedStudents.sort((student1, student2) => student2.courseCompletedLevel - student1.courseCompletedLevel);
+
         return (
             <div className="student-progress-board">
                 <h1 className="board-title">Student Progress Board</h1>
                 <StudentsStatus
-                    students={students}
+                    students={sortedStudents}
                     courses={courses}
                 />
             </div>
