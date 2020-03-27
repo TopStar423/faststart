@@ -26,7 +26,7 @@
 
       .student-status-item {
         display: flex;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
 
         .student {
           display: flex;
@@ -39,27 +39,6 @@
           .student-name {
             font-size: 15px;
             line-height: 30px;
-          }
-        }
-
-        .ant-steps {
-          width: 84%;
-
-          .ant-steps-item-content {
-            width: 100%;
-            text-align: left;
-
-            .ant-steps-item-title {
-              font-size: 13px;
-            }
-
-            .ant-steps-item-description {
-              font-size: 12px;
-
-              .warning {
-                color: #ff7d5a;
-              }
-            }
           }
         }
       }

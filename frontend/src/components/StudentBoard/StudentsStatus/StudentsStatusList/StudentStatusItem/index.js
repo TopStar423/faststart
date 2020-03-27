@@ -59,45 +59,28 @@ export default class StudentStatusItem extends Component {
                     </div>
                     <div className="student-name">{student.name}</div>
                 </div>
-                <Steps current={student.courseCompletedLevel} labelPlacement="horizontal">
+                <div className="student-course-status">
                     {courses.map(course => {
-                        let currentCourseStatus = '';
-                        let icon = null;
+                        let courseClassName = 'course-name';
 
                         if (student.courseCompletedLevel >= course.level) {
-                            icon = (
-                                <Popover content={this.popoverContent(course)} title="Complete Course" trigger="hover">
-                                    <CheckCircleTwoTone twoToneColor="#52c41a" />
-                                </Popover>
-                            );
-                        } else if (student.courseCompletedLevel === course.level - 1) {
-                            currentCourseStatus = (
-                                <span className={student.currentCourseStatus > 20 ? 'warning' : ''}>
-                                    It's been {student.currentCourseStatus} days
-                                </span>
-                            );
-                            icon = (
-                                <Popover content={this.popoverContent(course, 'active')} title="Complete Course" trigger="hover">
-                                    <HomeTwoTone />
-                                </Popover>
-                            );
-                        } else {
-                            icon = (
-                                <Popover content={this.popoverContent(course)} title="Complete Course" trigger="hover">
-                                    <QuestionOutlined />
-                                </Popover>
-                            );
+                            courseClassName = 'course-name completed';
                         }
 
                         return (
-                            <Step
-                                title={course.name}
-                                description={currentCourseStatus}
-                                icon={icon}
-                            />
+                            <div className="course-item">
+                                <Popover content={student.courseCompletedLevel === course.level - 1 ? this.popoverContent(course, 'active') : this.popoverContent(course)} title="Complete Course" trigger="hover">
+                                    <div className={courseClassName}>{course.name}</div>
+                                </Popover>
+                                {student.courseCompletedLevel === course.level - 1 && (
+                                    <span className={student.currentCourseStatus > 20 ? 'current-course-status warning' : 'current-course-status'}>
+                                        It's been {student.currentCourseStatus} days
+                                    </span>
+                                )}
+                            </div>
                         )
                     })}
-                </Steps>
+                </div>
                 <CompleteCourseModal
                     isCompletingCourse={isCompletingCourse}
                     closeCompleteCourseModal={this.closeCompleteCourseModal}

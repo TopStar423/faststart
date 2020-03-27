@@ -23,3 +23,36 @@
     margin-bottom: 10px;
   }
 }
+
+.student-course-status {
+  display: flex;
+  width: 85%;
+  border: 1px solid #a99a9a;
+  border-radius: 3px;
+  border-right: none;
+
+  .course-item {
+    position: relative;
+    flex: 1 1 auto;
+    border-right: 1px solid #a99a9a;
+
+    .course-name {
+      padding: 5px 10px;
+      background: #fff;
+      cursor: pointer;
+
+      &.completed {
+        background: #52c41a;
+      }
+    }
+
+    .current-course-status {
+      position: absolute;
+      right: 0;
+
+      &.warning {
+        color: #ff7d5a;
+      }
+    }
+  }
+}
