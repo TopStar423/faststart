@@ -9,7 +9,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="homepage">
-                Homepage Comming Soon
+                Homepage Coming Soon
             </div>
         )
     }
