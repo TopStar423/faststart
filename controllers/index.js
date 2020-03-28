@@ -1,5 +1,7 @@
 const student = require('./student');
+const user = require('./user');
 
 module.exports = {
-    student
+    user,
+    student,
 };

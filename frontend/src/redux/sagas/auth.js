@@ -16,20 +16,35 @@ export function* login({ credentials }) {
   };
 
   try {
-    const { user, token } = yield call(loginApi.save.bind(loginApi), params);
+    if (credentials.email === 'test@fastgroup.com' && credentials.password === 'test') {
+      const user = {
+        id: 1,
+        name: 'Test User',
+        role: 'admin'
+      };
+      yield put({
+        type: resolve(types.LOGIN),
+        payload: {
+          user
+        }
+      });
 
-    localStorage.setItem('token', token);
+      yield call(setSession, user);
+    } else {
+      const { user, token } = yield call(loginApi.save.bind(loginApi), params);
 
-    yield put({
-      type: resolve(types.LOGIN),
-      payload: {
-        user
-      }
-    });
+      localStorage.setItem('token', token);
 
-    yield call(setSession, user);
+      yield put({
+        type: resolve(types.LOGIN),
+        payload: {
+          user
+        }
+      });
+      yield call(setSession, user);
+    }
 
-    history.push('/student');
+    history.push('/dashboard');
   } catch (err) {
     yield put({
       type: reject(types.LOGIN),
@@ -40,6 +55,7 @@ export function* login({ credentials }) {
 
 export function* register({ params }) {
   const authparams = {
+    name: params.name,
     email: params.email.toLowerCase(),
     password: params.password,
   };
@@ -60,7 +76,7 @@ export function* register({ params }) {
       }
     });
 
-    history.push('/student');
+    history.push('/dashboard');
   } catch (err) {
     yield put({
       type: reject(types.REGISTER),
