@@ -1,11 +1,11 @@
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-const admin = require('../firebase');
-
-const db = admin.firestore();
-db.settings({
-    timestampsInSnapshots: true
-});
+// const admin = require('../firebase');
+//
+// const db = admin.firestore();
+// db.settings({
+//     timestampsInSnapshots: true
+// });
 
 module.exports = {
     register: async (req, res) => {
@@ -26,11 +26,11 @@ module.exports = {
                     }
                 });
             });
-            const userRef = db.collection("users").add({
-                name: name,
-                email: email,
-                password: hashPassword
-            });
+            // const userRef = db.collection("users").add({
+            //     name: name,
+            //     email: email,
+            //     password: hashPassword
+            // });
         } catch (err) {
             res.status(400).send(err);
         }
