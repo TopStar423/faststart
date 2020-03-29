@@ -22,7 +22,7 @@ export default class StudentStatusItem extends Component {
     popoverContent = (course, status) => {
         return (
             <div className="course-popover-content">
-                <a className="course-url" href={course.url} target="_blank">Go To Course</a>
+                <a className="course-url" href={course.url} target="_blank">Go To Lesson</a>
                 <Button
                     className="btn-course-complete"
                     onClick={this.handleCompleteCourse}
@@ -72,11 +72,11 @@ export default class StudentStatusItem extends Component {
                                 <Popover content={student.courseCompletedLevel === course.level - 1 ? this.popoverContent(course, 'active') : this.popoverContent(course)} title="Complete Course" trigger="hover">
                                     <div className={courseClassName}>{course.name}</div>
                                 </Popover>
-                                {student.courseCompletedLevel === course.level - 1 && (
-                                    <span className={student.currentCourseStatus > 20 ? 'current-course-status warning' : 'current-course-status'}>
-                                        It's been {student.currentCourseStatus} days
-                                    </span>
-                                )}
+                                {/*{student.courseCompletedLevel === course.level - 1 && (*/}
+                                {/*    <span className={student.currentCourseStatus > 20 ? 'current-course-status warning' : 'current-course-status'}>*/}
+                                {/*        It's been {student.currentCourseStatus} days*/}
+                                {/*    </span>*/}
+                                {/*)}*/}
                             </div>
                         )
                     })}
