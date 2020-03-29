@@ -26,7 +26,7 @@
 
 .student-course-status {
   display: flex;
-  width: 85%;
+  width: calc(100% - 180px);
   border: 1px solid #a99a9a;
   border-radius: 3px;
   border-right: none;
